@@ -9,5 +9,3 @@ target_link_libraries(${PROJECT_NAME}
     GTest::GTest
     VersionChecker
 )
-
-install(TARGETS ${PROJECT_NAME} DESTINATION ${CMAKE_SOURCE_DIR}/bin/tests)

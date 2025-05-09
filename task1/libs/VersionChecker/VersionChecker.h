@@ -1,5 +1,7 @@
 #pragma once
 
+#include "version.h"
+
 class VersionChecker
 {
 public:

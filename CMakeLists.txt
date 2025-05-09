@@ -3,11 +3,11 @@ cmake_minimum_required(VERSION 3.12)
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
-project(otus-cpp)
+project(otus-cpp VERSION ${PROJECT_VERSION})
 
 option(BUILD_TESTING "Whether to build tests" ON)
 configure_file(version.h.in version.h)
-SET(VERSION_FILE ${CMAKE_CURRENT_BINARY_DIR}/version.h)
+SET(VERSION_FILE ${CMAKE_CURRENT_BINARY_DIR})
 
 if (BUILD_TESTING)
     enable_testing()
