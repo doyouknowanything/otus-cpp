@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(helloworld VERSION ${PROJECT_VERSION})
+project(helloworld_cli VERSION ${PROJECT_VERSION})
 
 message(STATUS "building ${PROJECT_NAME} Binary")
 
