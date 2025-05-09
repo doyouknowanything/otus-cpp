@@ -5,9 +5,8 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(otus-cpp VERSION ${PROJECT_VERSION})
 
-option(BUILD_TESTING "Whether to build tests" ON)
 configure_file(version.h.in version.h)
-SET(VERSION_FILE ${CMAKE_CURRENT_BINARY_DIR})
+set(VERSION_FILE ${CMAKE_CURRENT_BINARY_DIR})
 
 if (BUILD_TESTING)
     enable_testing()
@@ -16,3 +15,11 @@ if (BUILD_TESTING)
 endif()
 
 add_subdirectory(task1)
+
+set(CPACK_PACKAGE_NAME helloworld)
+set(CPACK_GENERATOR DEB)
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+set(CPACK_PACKAGE_CONTACT example@example.com)
+include(CPack)
