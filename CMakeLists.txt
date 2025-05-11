@@ -15,6 +15,7 @@ if (BUILD_TESTING)
 endif()
 
 add_subdirectory(task1)
+add_subdirectory(task2)
 
 set(CPACK_PACKAGE_NAME helloworld)
 set(CPACK_GENERATOR DEB)
